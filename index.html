@@ -1,48 +1,157 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<title>定位展示知识点视图</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>新闻资讯网页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "宋体", sans-serif;
+        }
+        body {
+            padding: 15px;
+            background: #fff;
+        }
+        .container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .channel-nav {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        .channel-nav .tag {
+            background: #333;
+            color: #fff;
+            padding: 2px 6px;
+            margin-right: 4px;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 10px 0 18px;
+        }
+        .content-wrap {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        .left-news {
+            width: 68%;
+        }
+        .right-hot {
+            width: 32%;
+        }
+        .news-item {
+            margin-bottom: 20px;
+        }
+        .news-item h4 {
+            font-size: 15px;
+            font-weight: bold;
+            color: #222;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        .news-img-box {
+            display: flex;
+            gap: 3%;
+            margin-bottom: 6px;
+        }
+        .news-img {
+            width: 48.5%;
+            height: 105px;
+            object-fit: cover;
+            border: 1px solid #eee;
+        }
+        .news-author {
+            font-size: 12px;
+            color: #666;
+        }
+    
+        .right-hot h4 {
+            font-size: 15px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 12px;
+        }
+        .hot-item {
+            margin-bottom: 20px;
+        }
+        .hot-item a {
+            display: block;
+            font-size: 14px;
+            color: #222;
+            text-decoration: none;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        .hot-img {
+            width: 100%;
+            height: 105px;
+            object-fit: cover;
+            border: 1px solid #eee;
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-  <div class="center-logo">
-    <img src="1.jpg" alt="HTML CSS">
-  </div>
+    <div class="container">
+        <div class="channel-nav">
+            频道 <span class="tag">科技</span> > 太空探测
+        </div>
+        <hr>>
+        <div class="content-wrap">
+            <div class="left-news">
+                <div class="news-item">
+                    <h4>飞行了200多亿公里的旅行者1号，为何不会撞上太空中的小行星</h4>
+                    <div class="news-img-box">
+                        <img src="1.jpg" class="news-img">
+                        <img src="2.jpg" class="news-img">
+                    </div>
+                    <p class="news-author">每日资讯 刚刚 +关注</p >
+                </div>
 
-  <div class="box html-box">
-    <h4>HTML基础和HTML5</h4>
-    <ul>
-      <li>HTML标签与属性</li>
-      <li>HTML5多媒体（视频和音频）</li>
-      <li>HTML5地理定位（画布和SVG）</li>
-      <li>HTML5拖放API</li>
-    </ul>
-  </div>
+                <div class="news-item">
+                    <h4>欧洲探测器从4亿公里外传回来多张照片</h4>
+                    <div class="news-img-box">
+                        <img src="3.jpg" class="news-img">
+                        <img src="4.jpg" class="news-img">
+                    </div>
+                    <p class="news-author">科技日报 2分钟前 +关注</p >
+                </div>
 
-  <div class="box css-box">
-    <h4>CSS基础和CSS3</h4>
-    <ul>
-      <li>CSS选择器</li>
-      <li>CSS堆叠与定位</li>
-      <li>CSS3的2D与3D转换</li>
-      <li>CSS3的过渡效果</li>
-    </ul>
-  </div>
+                <div class="news-item">
+                    <h4>为什么太空没有氧气，陨石仍然能够燃烧</h4>
+                    <div class="news-img-box">
+                        <img src="5.jpg" class="news-img">
+                        <img src="6.jpg" class="news-img">
+                    </div>
+                    <p class="news-author">国际社会 5分钟前 +关注</p >
+                </div>
+            </div>
+            <div class="right-hot">
+                <h4>热文推荐</h4>
 
-  <div class="box js-box">
-    <h4>JavaScript</h4>
-    <ul>
-      <li>数据类型</li>
-      <li>运算符</li>
-      <li>基本语法</li>
-      <li>BOM对象</li>
-      <li>DOM对象</li>
-      <li>DOM的事件</li>
-      <li>定时器</li>
-    </ul>
-  </div>
-</div>
+                <div class="hot-item">
+                    <a href=" ">研究表明：人类的自然寿命为120岁</a >
+                    <img src="7.jpg" class="hot-img">
+                </div>
+
+                <div class="hot-item">
+                    <a href="#">白墙脏了不用重新刷：一个窍门，简单一擦，立马干净如新</a >
+                    <img src="8.jpg" class="hot-img">
+                </div>
+
+                <div class="hot-item">
+                    <a href="#">俗语“八月十二用一宝，四季无烦恼”，一宝竟是盐水</a >
+                    <img src="9.jpg" class="hot-img">
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
